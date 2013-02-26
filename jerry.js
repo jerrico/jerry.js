@@ -193,7 +193,7 @@ var getJSON = function(url, meth, data) {
         });
     },
 
-    can: function(attr, action, change_amount) {
+    can: function(action, change_amount) {
       var change = change_amount || 1,
           restrictions = this.restrictions[action];
       if (!restrictions || restrictions.length === 0) return this.default_mode;
@@ -208,7 +208,7 @@ var getJSON = function(url, meth, data) {
       return !this.default_mode;
     },
 
-    did: function(attr, change_amount) {
+    did: function(action, change_amount) {
       var change = change_amount || 1,
           restrictions = this.restrictions[action];
 
