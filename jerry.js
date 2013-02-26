@@ -200,7 +200,7 @@ var getJSON = function(url, meth, data) {
 
       for (var idx=0; idx < restrictions.length; idx++) {
         var restriction = restrictions[idx];
-        if (!Restrictions[restriction._class].allows(
+        if (!Restrictions[restriction.class_].allows(
               restriction, this, action, change
           )) return false;
       }
@@ -215,7 +215,7 @@ var getJSON = function(url, meth, data) {
       if (restrictions && restrictions.length > 0) {
         for (var idx=0; idx < restrictions.length; idx++) {
           var restriction = restrictions[idx];
-          Restrictions[restriction._class].did(
+          Restrictions[restriction.class_].did(
                 restriction, this, action, change
             );
         }
