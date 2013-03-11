@@ -178,6 +178,7 @@ var getJSON = function(url, meth, data) {
       this.profile_name = profile_state.profile;
       this.default_mode = profile_state['default'] === 'allow';
       this.restrictions = profile_state.states;
+      this.uuid = profile_state.uuid;
       this.account = profile_state.account;
       this.loaded = true;
       this.trigger("loaded");
